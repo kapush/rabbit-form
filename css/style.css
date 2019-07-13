@@ -1,0 +1,187 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: HelveticaNeue, sans-serif;
+  font-size: 16px;
+}
+* {
+  box-sizing: border-box;
+}
+.rabbit {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.rabbit-blury-background {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/sunset.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: blur(5px);
+  filter: blur(10px);
+}
+.rabbit-rectangle {
+  flex-basis: 626px;
+  margin: auto;
+  position: relative;
+  height: 436px;
+  padding: 64px 30px 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+@media screen and (max-width: 600px) {
+  .rabbit-rectangle {
+    height: auto;
+  }
+}
+.rabbit-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-end;
+  height: 100%;
+  margin: 0 20%;
+}
+.rabbit-form__email,
+.rabbit-form__pass,
+.rabbit-form__submit {
+  z-index: 100;
+  flex-basis: 100%;
+  height: 48px;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 16px;
+}
+.rabbit-form__email,
+.rabbit-form__pass {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.rabbit-form__email:valid,
+.rabbit-form__pass:valid {
+  background-color: transparent;
+  background-image: url("../img/input-valid.svg");
+  background-repeat: no-repeat;
+  background-position: right 23px top 16px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.rabbit-form__email:valid + span,
+.rabbit-form__pass:valid + span {
+  display: block;
+}
+.rabbit-form__email:focus:invalid,
+.rabbit-form__pass:focus:invalid {
+  background-color: transparent;
+  background-image: url("../img/input-invalid.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px top 8px;
+  color: rgba(0, 0, 0, 0.4);
+  outline: none;
+}
+.rabbit-form__email:invalid + span,
+.rabbit-form__pass:invalid + span {
+  display: block;
+}
+.rabbit-form__email::-webkit-validation-bubble-message,
+.rabbit-form__pass::-webkit-validation-bubble-message {
+  display: none;
+}
+.rabbit-form__pass {
+  margin-top: 15px;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.4);
+}
+.rabbit-form__submit {
+  margin: 0 30%;
+  background: transparent;
+  border: 1px solid #fff;
+  font-size: 12.8px;
+  letter-spacing: 2.53px;
+  color: #fff;
+}
+.rabbit-form__submit_disabled {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.2);
+}
+.rabbit-form__memories {
+  display: inline-block;
+  flex-basis: 100%;
+  margin: 23px auto 18px;
+  padding: 0 20px;
+}
+.rabbit-form__error {
+  display: none;
+  z-index: 200;
+  padding: 3px 0;
+  font-size: set-font(9.6px);
+  color: red;
+}
+.logo {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 60%;
+  height: auto;
+}
+@media screen and (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+}
+.back-button {
+  background: url("../img/arrow-back.svg") no-repeat;
+  background-position: top 50% left 0;
+}
+.back-button__link {
+  padding-left: 20px;
+  font-size: 9.6px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+.remember-me {
+  display: inline-block;
+}
+.remember-me-link {
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  padding: 3px 18px 5px 4px;
+  border: 1px solid #fff;
+  border-radius: 25px;
+}
+.remember-me-link__rect {
+  width: 22px;
+  height: 16px;
+  vertical-align: top;
+  border-radius: 25px;
+  background-color: #fff;
+}
+.remember-me-link_checked {
+  padding: 3px 5px 5px 17px;
+}
+.remember-me__text {
+  vertical-align: top;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 0;
+}
+.remember-me_disabled .remember-me__text {
+  display: none;
+}
+.remember-me_disabled .remember-me-link__rect {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.forgot-pass {
+  float: right;
+  vertical-align: top;
+  font-size: 16px;
+  letter-spacing: 0;
+  color: #fff;
+}
