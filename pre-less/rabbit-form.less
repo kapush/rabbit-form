@@ -1,0 +1,88 @@
+.rabbit-form {
+    .flex-container;
+    align-content: flex-end;
+
+    height: 100%;
+    margin: 0 20%;
+
+    &__email, 
+    &__pass, 
+    &__submit{
+        z-index: 100;
+
+        flex-basis: 100%;
+        height: @input-height;
+
+        border-radius: 25px;
+
+        text-align: center;
+        .set-font;
+    }
+
+    &__email, &__pass {
+        border: 1px solid fade(@base-color, 40%);
+        
+        &:valid {
+            .set-validation-style(@img-input-valid, right 23px top 16px);
+        }
+        
+        &:focus:invalid {
+            .set-validation-style(@img-input-invalid, right 10px top 8px);
+
+            & + .rabbit-form__hint{
+                visibility: initial;
+            }
+        }
+    }
+
+    &__pass {    
+        margin-top: 10px;
+
+        background: transparent;
+        color: fade(@black, 40%);
+    }       
+    
+    &__submit {
+        margin: 0 30%;
+
+        background: transparent;
+        border: 1px solid @base-color;
+
+        .set-font(@base-font-size * 0.8);
+        letter-spacing: 2.53px;
+        color: @base-color;
+
+        &_disabled {
+            border: 1px solid fade(@base-color, 40%);
+            color: fade(@base-color, 20%);
+        }
+    }
+
+    &__hint, &__hint, &__error {
+        visibility: hidden;
+        padding: 0;
+        margin: 2px 0 0;
+
+        .set-font(@base-font-size * 0.8);
+        color: darken(@error-color, 10%);
+    }
+
+    &__error {
+        margin-bottom: 5px;
+    }
+
+    &__memories {
+        display: inline-block;
+        
+        flex-basis: 100%;
+        margin: 13px auto 10px;
+        padding: 0 20px;
+    }
+}
+
+::-webkit-credentials-auto-fill-button {
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+}

@@ -1,0 +1,46 @@
+.remember-me {
+
+    display: inline-block;
+
+    &-link {
+        display: inline-block;
+
+        width: 44px;
+        height: 24px;
+        padding: 3px 18px 5px 4px;
+
+        border: 1px solid @base-color;
+        border-radius: 25px;
+
+        &__rect {
+            width: 22px;
+            height: 16px;
+            vertical-align: top;
+            border-radius: 25px;
+
+            background-color: @base-color;
+        }
+
+        &_checked {
+            padding: 3px 5px 5px 17px;
+        }
+    }
+    &__text {   
+        vertical-align: top;
+
+        .set-font(@base-font-size * 0.9);
+        color: @base-color;
+        letter-spacing: 0;
+    }
+
+    &_disabled {
+        .remember-me__text {
+            display: none;
+        }
+        .remember-me-link {
+            &__rect {
+                background-color: fade(@base-color, 30%);
+            }
+        }
+    }
+}

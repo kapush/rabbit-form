@@ -31,13 +31,19 @@ body {
   margin: auto;
   position: relative;
   height: 436px;
-  padding: 64px 30px 30px;
+  padding: 30px 30px 64px;
   background-color: rgba(255, 255, 255, 0.1);
 }
 @media screen and (max-width: 600px) {
   .rabbit-rectangle {
     height: auto;
   }
+}
+.rabbit__reged {
+  display: none;
+  margin: auto;
+  font-size: 32px;
+  color: #fff;
 }
 .rabbit-form {
   display: flex;
@@ -69,10 +75,6 @@ body {
   background-position: right 23px top 16px;
   color: rgba(0, 0, 0, 0.4);
 }
-.rabbit-form__email:valid + span,
-.rabbit-form__pass:valid + span {
-  display: block;
-}
 .rabbit-form__email:focus:invalid,
 .rabbit-form__pass:focus:invalid {
   background-color: transparent;
@@ -80,18 +82,13 @@ body {
   background-repeat: no-repeat;
   background-position: right 10px top 8px;
   color: rgba(0, 0, 0, 0.4);
-  outline: none;
 }
-.rabbit-form__email:invalid + span,
-.rabbit-form__pass:invalid + span {
-  display: block;
-}
-.rabbit-form__email::-webkit-validation-bubble-message,
-.rabbit-form__pass::-webkit-validation-bubble-message {
-  display: none;
+.rabbit-form__email:focus:invalid + .rabbit-form__hint,
+.rabbit-form__pass:focus:invalid + .rabbit-form__hint {
+  visibility: initial;
 }
 .rabbit-form__pass {
-  margin-top: 15px;
+  margin-top: 10px;
   background: transparent;
   color: rgba(0, 0, 0, 0.4);
 }
@@ -107,43 +104,29 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.4);
   color: rgba(255, 255, 255, 0.2);
 }
+.rabbit-form__hint,
+.rabbit-form__hint,
+.rabbit-form__error {
+  visibility: hidden;
+  padding: 0;
+  margin: 2px 0 0;
+  font-size: 12.8px;
+  color: #ffa9a9;
+}
+.rabbit-form__error {
+  margin-bottom: 5px;
+}
 .rabbit-form__memories {
   display: inline-block;
   flex-basis: 100%;
-  margin: 23px auto 18px;
+  margin: 13px auto 10px;
   padding: 0 20px;
 }
-.rabbit-form__error {
-  display: none;
-  z-index: 200;
-  padding: 3px 0;
-  font-size: set-font(9.6px);
-  color: red;
-}
-.logo {
+::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  pointer-events: none;
   position: absolute;
-  top: -24px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 60%;
-  height: auto;
-}
-@media screen and (max-width: 600px) {
-  .logo {
-    display: none;
-  }
-}
-.back-button {
-  background: url("../img/arrow-back.svg") no-repeat;
-  background-position: top 50% left 0;
-}
-.back-button__link {
-  padding-left: 20px;
-  font-size: 9.6px;
-  letter-spacing: 1px;
-  text-align: center;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.8);
+  right: 0;
 }
 .remember-me {
   display: inline-block;
@@ -168,7 +151,7 @@ body {
 }
 .remember-me__text {
   vertical-align: top;
-  font-size: 16px;
+  font-size: 14.4px;
   color: #fff;
   letter-spacing: 0;
 }
@@ -178,10 +161,35 @@ body {
 .remember-me_disabled .remember-me-link__rect {
   background-color: rgba(255, 255, 255, 0.3);
 }
+.logo {
+  position: absolute;
+  top: -48px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 60%;
+  height: auto;
+}
+@media screen and (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+}
+.back-button {
+  background: url("../img/arrow-back.svg") no-repeat;
+  background-position: top 50% left 0;
+}
+.back-button__link {
+  padding-left: 20px;
+  font-size: 9.6px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
 .forgot-pass {
   float: right;
   vertical-align: top;
-  font-size: 16px;
+  font-size: 14.4px;
   letter-spacing: 0;
   color: #fff;
 }
