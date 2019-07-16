@@ -3,9 +3,15 @@
     .centrify-horizontly(-@input-height);
 
     width: 60%;
-    height: auto;
+    height: 50%;
 
-    @media screen and (max-width: 600px) {
-        display: none;
+    background-image: @img-rabbit;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (max-width: 600px) {
+        background-image: @img-rabbit-small;
+        width: 80px;
+        height: 100px;
     }
 }

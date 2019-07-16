@@ -216,11 +216,16 @@ body {
   left: 50%;
   transform: translate(-50%, 0);
   width: 60%;
-  height: auto;
+  height: 50%;
+  background-image: url("../img/rabbit.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .logo {
-    display: none;
+    background-image: url("../img/rabbit-small.png");
+    width: 80px;
+    height: 100px;
   }
 }
 .back-button {
