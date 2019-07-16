@@ -5,6 +5,12 @@ body {
   font-family: HelveticaNeue, sans-serif;
   font-size: 16px;
 }
+@media (max-width: 600px) {
+  html,
+  body {
+    font-size: 12.8px;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -34,9 +40,11 @@ body {
   padding: 30px 30px 64px;
   background-color: rgba(255, 255, 255, 0.1);
 }
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .rabbit-rectangle {
+    flex-basis: 320px;
     height: auto;
+    padding-bottom: 45px;
   }
 }
 .rabbit__reged {
@@ -45,6 +53,11 @@ body {
   font-size: 32px;
   color: #fff;
 }
+@media (max-width: 600px) {
+  .rabbit__reged {
+    font-size: 25.6px;
+  }
+}
 .rabbit-form {
   display: flex;
   flex-wrap: wrap;
@@ -52,6 +65,11 @@ body {
   align-content: flex-end;
   height: 100%;
   margin: 0 20%;
+}
+@media (max-width: 600px) {
+  .rabbit-form {
+    margin: 20px 0 0;
+  }
 }
 .rabbit-form__email,
 .rabbit-form__pass,
@@ -62,6 +80,13 @@ body {
   border-radius: 25px;
   text-align: center;
   font-size: 16px;
+}
+@media (max-width: 600px) {
+  .rabbit-form__email,
+  .rabbit-form__pass,
+  .rabbit-form__submit {
+    font-size: 12.8px;
+  }
 }
 .rabbit-form__email,
 .rabbit-form__pass {
@@ -100,6 +125,11 @@ body {
   letter-spacing: 2.53px;
   color: #fff;
 }
+@media (max-width: 600px) {
+  .rabbit-form__submit {
+    font-size: 10.24px;
+  }
+}
 .rabbit-form__submit_disabled {
   border: 1px solid rgba(255, 255, 255, 0.4);
   color: rgba(255, 255, 255, 0.2);
@@ -112,6 +142,13 @@ body {
   margin: 2px 0 0;
   font-size: 12.8px;
   color: #ffa9a9;
+}
+@media (max-width: 600px) {
+  .rabbit-form__hint,
+  .rabbit-form__hint,
+  .rabbit-form__error {
+    font-size: 10.24px;
+  }
 }
 .rabbit-form__error {
   margin-bottom: 5px;
@@ -130,6 +167,13 @@ body {
 }
 .remember-me {
   display: inline-block;
+}
+@media (max-width: 600px) {
+  .remember-me {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
 .remember-me-link {
   display: inline-block;
@@ -154,6 +198,11 @@ body {
   font-size: 14.4px;
   color: #fff;
   letter-spacing: 0;
+}
+@media (max-width: 600px) {
+  .remember-me__text {
+    font-size: 11.52px;
+  }
 }
 .remember-me_disabled .remember-me__text {
   display: none;
@@ -186,10 +235,27 @@ body {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
 }
+@media (max-width: 600px) {
+  .back-button__link {
+    font-size: 7.68px;
+  }
+}
 .forgot-pass {
   float: right;
   vertical-align: top;
   font-size: 14.4px;
   letter-spacing: 0;
   color: #fff;
+}
+@media (max-width: 600px) {
+  .forgot-pass {
+    display: block;
+    float: none;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .forgot-pass {
+    font-size: 11.52px;
+  }
 }

@@ -1,5 +1,10 @@
 .forgot-pass {
     float: right;
+    @media(max-width: 600px){
+        display: block;
+        float: none;
+        text-align: center;
+    }
     vertical-align: top;
 
     .set-font(@base-font-size * 0.9);

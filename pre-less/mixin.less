@@ -16,8 +16,12 @@
     transform: translate(-50%, 0);
 }
 
-.set-font(@font-size: @base-font-size) {
+.set-font(@font-size: @base-font-size; @media-delta: 0.8) {
     font-size: @font-size;
+
+    @media (max-width: 600px){
+        font-size: @font-size * @media-delta;
+    }
   }
 
 .set-validation-style(@img, @position){
